@@ -3,8 +3,8 @@ exports.handler = async function(context, event, callback) {
   const twiml = new Twilio.twiml.MessagingResponse();
   const inbMsg = event.Body.toLowerCase().trim();
   const configuration = new Configuration({
-    organization: "org-Oyoa0o8GqjpBw4Bbhb5ek8ou",
-    apiKey: process.env.OPENAI_API_KEY,
+    //organization: "org-Oyoa0o8GqjpBw4Bbhb5ek8ou",
+    apiKey: process.env.OPENAI_API_KEY
 });
   const openai = new OpenAIApi(configuration);
   const response = await openai.createCompletion({
